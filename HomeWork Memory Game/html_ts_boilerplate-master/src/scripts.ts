@@ -2,6 +2,7 @@ const gameContainer: HTMLDivElement = document.querySelector('#game-container');
 const winMessage: HTMLDivElement = document.querySelector('#win-message');
 const timerDisplay: HTMLDivElement = document.querySelector('.timer-display');
 const startButton: HTMLButtonElement = document.querySelector('#start-game-button');
+const resetButton: HTMLButtonElement = document.querySelector('.reset-button');
 
 let cardValues = ['Apple', 'Pear', 'Kiwi', 'Orange', 'Banana', 'Cherry'];
 let firstCard: HTMLDivElement | null = null;
@@ -9,7 +10,7 @@ let secondCard: HTMLDivElement | null = null;
 let lockBoard = false;
 
 let count = 0;
-let timer: number;
+let timer: any;
 let moves = 0;
 
 function resetBoard() {
@@ -31,9 +32,10 @@ function checkForWin() {
   if (count === 6) {
     clearInterval(timer);
     winMessage.style.display = 'block';
-    winMessage.innerHTML = `YOU WON! Your ${timerDisplay.innerHTML} and You used ${moves / 2} moves`;
+    winMessage.innerHTML = `YOU WON! Your ${timerDisplay.innerHTML} and You used ${moves / 2} moves!`;
     gameContainer.style.display = 'none';
     timerDisplay.style.display = 'none';
+    resetButton.style.display = 'block';
   }
 }
 
@@ -80,7 +82,7 @@ function shuffle(array: any[]) {
 
 function startTimer() {
   let time = 0;
-  setInterval(() => {
+  timer = setInterval(() => {
     time += 1;
     timerDisplay.innerHTML = `Time: ${time} seconds`;
   }, 1000);
@@ -88,6 +90,7 @@ function startTimer() {
 
 function startGame() {
   startTimer();
+  startButton.style.display = 'none';
   const cards = [];
   cardValues = shuffle(cardValues);
   cardValues = cardValues.concat(cardValues);
@@ -107,6 +110,22 @@ function startGame() {
     gameContainer.appendChild(card);
   }
 }
+
+resetButton.addEventListener('click', () => {
+  clearInterval(timer);
+  timerDisplay.innerHTML = 'Time: 0 seconds';
+  moves = 0;
+  while (gameContainer.firstChild) {
+    gameContainer.removeChild(gameContainer.firstChild);
+  }
+  count = 0;
+  startGame();
+  startTimer();
+  winMessage.style.display = 'none';
+  startButton.style.display = 'none';
+  timerDisplay.style.display = 'block';
+  gameContainer.style.display = 'flex';
+});
 
 startButton.addEventListener('click', () => {
   startButton.style.display = 'none';
