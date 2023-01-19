@@ -91,6 +91,7 @@ function startTimer() {
 function startGame() {
   startTimer();
   startButton.style.display = 'none';
+  resetButton.style.display = 'none';
   const cards = [];
   cardValues = shuffle(cardValues);
   cardValues = cardValues.concat(cardValues);
