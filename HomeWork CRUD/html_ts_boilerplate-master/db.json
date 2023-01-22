@@ -1,0 +1,40 @@
+{
+  "animals": [
+    {
+      "image": "https://onnitacademy.imgix.net/2016/02/pullups.png",
+      "name": "Pull up",
+      "description": "A pull-up is an upper-body exercise that involves hanging from a pull-up bar by your hands with your palms facing away from you, and lifting your entire body up with your arm and back muscles until your chest touches the bar.",
+      "id": 1
+    },
+    {
+      "image": "https://mirafit.co.uk/wp/wp-content/uploads/2018/04/fitness-expert-performs-a-standard-deadlift-using-mirafit-gym-equipment-1024x683.jpg",
+      "name": "Deadlift",
+      "description": "The deadlift is a movement in which your hips hinge backward to lower down and pick up a weighted barbell or kettlebell from the floor.",
+      "id": 2
+    },
+    {
+      "image": "https://i0.wp.com/thefitnessmaverick.com/wp-content/uploads/2020/10/F265CF38-5010-4DBF-BE3A-68C68A2A7E02_1_201_a-e1602589179813.jpeg?fit=1024%2C598&ssl=1",
+      "name": "Barbell row",
+      "description": "The barbell row is a two-step move. You lift the barbell from the ground and then angle your chest parallel to the ground so you're slightly bent over. Then, you lift and lower the barbell in a series of reps.",
+      "id": 3
+    },
+    {
+      "image": "https://ix-cdn.b2e5.com/images/41628/41628_e731cbd2d6834db6abfd90d944b18ba4_1653409458.jpeg",
+      "name": "Bench press",
+      "description": "The bench press is a compound exercise that targets the muscles of the upper body. It involves lying on a bench and pressing weight upward using either a barbell or a pair of dumbbells.",
+      "id": 5
+    },
+    {
+      "image": "https://images.ctfassets.net/3s5io6mnxfqz/34Npc5PKLKJi6HIYvFw9XI/3e45754912cf266e7401cb8074c63239/AdobeStock_386146138_2.jpeg",
+      "name": "Squat",
+      "description": "A squat is a strength exercise in which the trainee lowers their hips from a standing position and then stands back up.",
+      "id": 6
+    },
+    {
+      "image": "https://picsum.photos/300/200",
+      "name": "Test Card",
+      "description": "Do no delete this",
+      "id": 7
+    }
+  ]
+}
