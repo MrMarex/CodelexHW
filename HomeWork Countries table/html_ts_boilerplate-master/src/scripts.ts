@@ -63,10 +63,10 @@ const renderTable = (data: any, currPage: number, searchCriteria: Search) => {
   let filteredData = data;
   if (searchCriteria) {
     filteredData = data.filter((country: Country) => (
-      country.name.toLowerCase().includes(searchCriteria.name)
-        && country.capital.toLowerCase().includes(searchCriteria.capital)
-        && country.currency.name.toLowerCase().includes(searchCriteria.currency)
-        && country.language.name.toLowerCase().includes(searchCriteria.language)
+      country.name.toLowerCase().includes(searchCriteria.name.toLowerCase())
+        && country.capital.toLowerCase().includes(searchCriteria.capital.toLowerCase())
+        && country.currency.name.toLowerCase().includes(searchCriteria.currency.toLowerCase())
+        && country.language.name.toLowerCase().includes(searchCriteria.language.toLowerCase())
     ));
   }
 
