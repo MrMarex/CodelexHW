@@ -5,9 +5,11 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
     setInputText(e.target.value)
   }
 
-  const submitTodoHandler = (e: any) => {
+  const submitTodoHandler = (e: any) => {+
     e.preventDefault();
-    setTodos([...todos, { text: inputText, completed: false, id: Math.random() * 100 }]);
+    if(inputText.trim() !== "") {
+      setTodos([...todos, { text: inputText, completed: false, id: Math.random() * 100 }]);  
+    }
     setInputText("");
   }
 
