@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap');
+body{
+  margin: 0 auto;
+  background-image: linear-gradient(to right top, #343434, #3d3841, #4a3c4c, #5a3d53, #6d3e56, #7b3a54, #89364f, #963247, #a0273b, #a81b2d, #ae0d1b, #b10101);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+
+h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+
+.footer{
+  font-family: 'Ubuntu', sans-serif;
+  background-color: rgb(44, 255, 139);
+  text-align: center;
+  margin-top: 150px;
+  height: 100px;
+  padding-top: 30px;
+}
+
+.carousel {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 800px;
+  border: 1px solid white;
+  border-radius: 20px;
+  background-color:  rgb(24, 20, 37);
+  filter: drop-shadow(0 0 0.75rem white);
+}
+
+.simple-carousel, .dot-carousel {
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.preview-carousel {
+  margin-bottom: 150px;
+}
+
+.carousel img {
+  max-width: 100%;
+}
+
+.timer-carousel {
+  margin-top: 50px;
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel button:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+.carousel button.prev {
+  left: 15px;
+}
+
+.carousel button.prev:before {
+  border-right: 15px solid #FFF;
+}
+
+.carousel button.next {
+  right: 15px;
+}
+
+.carousel button.next:before {
+  border-left: 15px solid #FFF;
+}
+
+/* Dotted carousel */
+
+.carousel .dots {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.carousel .dot {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  border: 1px solid #fff
+}
+
+.carousel .dot.active {
+  background: rgb(24, 20, 37);
+  width: 14px;
+  height: 14px;
+}
+
+/* Preview carousel */
+
+.previews {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  bottom: -100px;
+}
+
+.preview-img{
+  width: 100px;
+  height: 60px;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.preview-img.active {
+  border: 3px solid rgb(24, 20, 37);
+}
+
+.fullScreen-btn {
+  -webkit-text-stroke: 1px white;
+}
