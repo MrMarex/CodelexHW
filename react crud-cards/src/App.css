@@ -13,6 +13,7 @@ h1 {
 h2 {
   font-size: 24px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 p {
@@ -24,6 +25,8 @@ p {
   width: 1200px;
   margin: 0 auto;
   padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 img {
@@ -55,6 +58,7 @@ button {
   background-color: rgb(34, 76, 90);
   color: white;
   cursor: pointer;
+  margin: 10px 10px;
 }
 
 button:hover {
@@ -81,4 +85,8 @@ button[type='submit'] {
   border-radius: 15px;
   margin: 10px;
   background-image: linear-gradient(to left bottom, #4bf6e5, #51f7e0, #57f8db, #5ef9d6, #65fad0, #6cfbcb, #73fbc5, #7afcc0, #82fdba, #8afdb4, #93feae, #9bfea8);
+}
+
+form {
+  width: 100%
 }

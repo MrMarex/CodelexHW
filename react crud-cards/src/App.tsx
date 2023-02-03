@@ -1,96 +1,100 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import './App.css';
+import { useEffect, useState } from "react";
+import axios, { Canceler } from "axios";
+import CardList from "./components/CardList";
+import { CardId, MainCard } from "./assets/ts/interfaces";
+import CardForm from "./components/CardForm";
 
-const endpoint = 'http://localhost:5000/exercises';
+const endpoint = 'http://localhost:3004/exercises';
 
-interface Card {
-  id: number;
-  name: string;
-  description: string;
-  image: string;
-}
-
-const CardList: React.FC = () => {
-  const [cards, setCards] = useState<Card[]>([]);
+function App() {
+  const [cards, setCards] = useState<CardId[]>([]);
+  const [editing, setEditing] = useState(false);
+  const [editableCard, setEditableCard] = useState<CardId>({
+    id: -1,
+    name: '',
+    image: '',
+    description: ''
+  });
 
   useEffect(() => {
-    axios.get<Card[]>(endpoint).then(response => {
-      setCards(response.data);
-    });
+    let cancel: Canceler;
+    axios
+      .get<CardId[]>(endpoint, {
+        cancelToken: new axios.CancelToken((c) => (cancel = c)),
+      })
+      .then(({ data }) => {
+        setCards(data);
+      })
+
+    return () => cancel();
   }, []);
 
-  const handleDelete = (id: number) => {
-    axios.delete(`${endpoint}/${id}`).then(() => {
-      setCards(cards.filter(card => card.id !== id));
-    });
-  };
-
-  return (
-    <div>
-      {cards.map(card => (
-        <div key={card.id} className='card'>
-          <img src={card.image} alt={card.name} />
-          <h2>{card.name}</h2>
-          <p>{card.description}</p>
-          <button onClick={() => handleDelete(card.id)}>Delete</button>
-          {/* <button onClick={() => handleEdit(card.id)}>Edit</button> */}
-        </div>
-      ))}
-    </div>
-  );
-};
-
-const AddCardForm: React.FC = () => {
-  const [name, setName] = useState('');
-  const [description, setDescription] = useState('');
-  const [image, setImage] = useState('');
-  
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const addCard = (idCard: MainCard) => {
     axios
-      .post<Card>(endpoint, { name, description, image })
-      .then(() => {
-        setName('');
-        setDescription('');
-        setImage('');
+      .post<CardId>(endpoint, idCard)
+      .then(({ data }) => {
+        setCards([...cards, data]);
+      })
+      .catch((error) => {
+        console.log(error);
       });
   };
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={name}
-        onChange={event => setName(event.target.value)}
-        placeholder="Name"
-      />
-      <input
-        type="text"
-        value={description}
-        onChange={event => setDescription(event.target.value)}
-        placeholder="Description"
-      />
-      <input
-        type="text"
-        value={image}
-        onChange={event => setImage(event.target.value)}
-        placeholder="Image URL"
-      />
-      <button type="submit">Add Card</button>
-    </form>
-  );
-};
+  const deleteCard = (idCard: CardId) => {
+    axios
+      .delete(`${endpoint}/${idCard.id}`)
+      .then(() => {
+        console.log(idCard);
+        let updatedList: CardId[] = cards.filter(
+          (card) => card.id !== idCard.id
+        );
+        setCards(updatedList);
+      })
+  };
 
-const App: React.FC = () => (
-  <div className='main-container'>
-    <h1>CRUD</h1>
-    <div className="cards">
-      <CardList />
+  const closeEditScreen = () => {
+    setEditing(false);
+  };
+
+  const editCard = (idCard: CardId) => {
+    if (editing) {
+      return alert("Please finish editing first");
+    }
+    setEditing(true);
+    setEditableCard(idCard);
+  };
+
+  const saveCard = (idCard: CardId) => {
+    axios
+      .put<CardId>(`${endpoint}/${idCard.id}`, idCard)
+      .then(() => {
+        let updatedList: CardId[] = cards.filter(
+          (card) => card.id !== idCard.id
+        );
+        setCards([...updatedList, idCard]);
+      })
+
+    setEditing(false);
+  };
+
+  return (
+    <div className="main-container">
+      <h1>CRUD</h1>
+      <h5>(Edit dialog shows on top of the page)</h5>
+      {!editing ? (
+        <></>
+      ) : (
+        <CardForm
+          onSubmit={saveCard}
+          name={"EDIT"}
+          onClose={closeEditScreen}
+          card={editableCard}
+        />
+      )}
+      <CardList cards={cards} deleteCard={deleteCard} editCard={editCard} />
+      <CardForm onSubmit={addCard} name={"ADD NEW"} />
     </div>
-    <AddCardForm />
-  </div>
-);
+  );
+}
 
 export default App;
