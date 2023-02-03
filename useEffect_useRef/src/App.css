@@ -1,15 +1,18 @@
-.container {
+.container-counters {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    gap: 10px;
 }
   
 .double-counter {
     width: 50px;
     height: 50px;
-    background-color: lightblue;
+    background-color: rgb(0, 32, 43);
+    color: white;
     text-align: center;
     line-height: 50px;
+    border-radius: 25%;
 }
 
 .rectangle-container {
@@ -26,13 +29,83 @@
 }
 
 .container-form {
-    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid rgb(46, 46, 46);
+    border-radius: 35px;
     width: 400px;
     padding: 20px;
-    margin: 15px;
+}
+
+.text-shadow {
+    max-width: 400px;
 }
 
 .rectangle--colored {
     border: 1px solid black;
     border-radius: 10px;
+}
+
+.form {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    margin: 0 auto;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 50px;
+    gap: 30px;
+}
+
+.button--disabled {
+    margin: 0 auto;
+}
+
+.container--colored {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 10px;
+}
+
+.color-selectors{
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+}
+
+.transforming-rectangles {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.transforming-div {
+    background-color: gray;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.transforming-div--red {
+    background: red;
+}
+
+.transforming-div--black {
+    background: black;
+    color: white;
+    padding: 10px;
+    padding-top: 35px;
 }
