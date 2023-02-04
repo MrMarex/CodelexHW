@@ -33,7 +33,13 @@
   border-radius: 10px;
 }
   
-.CardEpisodes--BlockInfo {
+.BlockInfo {
   padding: 10px;
   margin: 0 auto;
+}
+
+.EpisodeName {
+  font-family: 'Caveat', cursive;
+  font-size: 28px;
+  line-height: 15px;
 }

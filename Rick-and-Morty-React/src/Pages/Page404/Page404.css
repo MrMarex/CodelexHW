@@ -1,0 +1,18 @@
+.bg-404 {
+    background-color: #1d2124;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.ErrorCode {
+    background: url('https://tinyurl.com/RickAndMorty404');
+    background-repeat: no-repeat;
+    background-size: 800px 600px;
+    height: 700px;
+    width: 800px;
+    margin: 100px auto;
+}

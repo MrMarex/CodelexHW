@@ -1,3 +1,4 @@
+
 .LocationBlock {
     display: flex;
     flex-wrap: wrap;
@@ -7,13 +8,15 @@
 
 .location-name {
     background: #1e2127;
-    padding: 5px;
-    width: 250px;
+    padding: 15px;
+    min-width: 180px;
     height: 60px;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50px;
-    font-size: 17px;
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+
 }

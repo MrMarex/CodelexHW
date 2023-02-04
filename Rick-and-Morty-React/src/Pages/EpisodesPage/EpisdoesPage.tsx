@@ -14,8 +14,6 @@ const EpisodesPage = () => {
       setEpisode(response.data.results);
     } catch (error) {
       navigate('/');
-    } finally {
-      console.log('');
     }
   };
 
@@ -33,8 +31,8 @@ const EpisodesPage = () => {
               <div>
                 <img className="avatar" src="https://tinyurl.com/mortyEpIco" alt="avatar" />
               </div>
-              <div className="CardEpisodes--BlockInfo">
-                <p>Title: {epi.name}</p>
+              <div className="BlockInfo">
+                <p className='EpisodeName'>{epi.name}</p>
                 <p>{epi.episode}</p>
                 <p>{epi.air_date}</p>
               </div>

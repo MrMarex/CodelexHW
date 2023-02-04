@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { CharacterResults } from '../../Models/CharacterModel';
@@ -30,13 +30,15 @@ const CharacterPage = () => {
     <div className="SectionCharacter">
       {character && (
         <div className="BlockCharacter">
+          <h4>Character's info</h4>
+          <h1>{character.name}</h1>
           <div className="CardCharacter">
             <div>
               <img className="Avatar" src={character.image} alt="" />
-              <h4>{character.name}</h4>
               <p>{`Species: ${character.species}`}</p>
               <p>{`Gender: ${character.gender}`}</p>
               <p>{character.type !== '' ? `Type: ${character.type}` : ''}</p>
+              <p>{`Status: ${character.status}`}</p>
             </div>
           </div>
         </div>

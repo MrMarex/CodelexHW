@@ -1,26 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+
+
 .SectionCharacter{
   padding: 20px 50px;
   text-align: center;
 }
   
-.BlockCharacter{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  border-top: 3px solid black;
-}
-  
 .CardCharacter{
-  margin-top: 20px;
+  margin: 0 auto;
   padding: 20px;
   border: 2px solid black;
   border-radius: 20px;
   background: #1e2127;
   color: white;
   font-weight: 800;
+  width: 300px;
 }
 
 .CardCharacter .Avatar{
   border-radius: 10px;
+}
+
+h4 {
+  font-family: 'Caveat', cursive;
+    color: chartreuse;
+    font-size: 60px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    line-height: 65px;
+    margin: 0;
 }

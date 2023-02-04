@@ -30,7 +30,7 @@ const LocationsPage = () => {
         {locations && locations.map((location) => (
           <div key={Math.random()}>
             <div className="location-name">
-              <h4>{location.name}</h4>
+              <h5>{location.name}</h5>
             </div>
           </div>
         ))}
