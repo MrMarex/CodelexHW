@@ -1,0 +1,83 @@
+.SectionCharacters{
+  padding: 20px 50px;
+  text-align: center;
+}
+  
+.BlockCharacters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  border-top: 3px solid black;
+}
+  
+.CardCharacters{
+  margin-top: 20px;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+  background: #1e2127;
+  color: purple;
+  font-weight:500;
+}
+
+.CardCharacters :hover{
+  color: white;
+}
+
+.Avatar{
+  border-radius: 10px;
+}
+  
+.Characters__Buttons--Status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 10px;
+}
+
+.Characters__Buttons--Status :hover{
+  font-weight:600;
+  color: yellowgreen;
+  border: 5px solid yellowgreen;
+}
+
+.Button {
+  border: 2px solid purple;
+  border-radius: 50px;
+  background: #282c34;
+  color: purple;
+  font-size: 25px;
+  font-weight:500;
+  width: 180px;
+  height: 60px;
+  box-shadow: 1px 1px 60px rgba(139, 0, 139, 0.3);
+  cursor: pointer;
+}
+
+.Button :hover{
+  font-weight:400;
+  color: chartreuse;
+  border: 1px solid chartreuse;
+}
+
+.Button--Unknown {
+  border: 2px solid grey;
+  color: grey;
+}
+
+.Button--Dead {
+  border: 2px solid red;
+  color: red;
+}
+
+.Button--Alive {
+  border: 2px solid springgreen;
+  color: springgreen;
+}
+
+.CardCharacters--BlockName {
+  font-size: 20px;
+  color: white;
+}

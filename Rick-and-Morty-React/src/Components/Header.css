@@ -1,0 +1,35 @@
+.navigation{
+  margin: 0 auto;
+  background: rgba(128, 255, 0, 0.562);
+  border-radius: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  min-height: 100px;
+  align-items: center;
+  width: 800px;
+}
+  
+.link{
+  text-decoration: none;
+  color: #00959E;
+  transition: 0.5s;
+  font-weight:500;
+  font-size: 30px;
+}
+
+.link:hover{
+  font-weight:900;
+  color: #2F4858;
+}
+
+.link--active{
+  transition: 0.5s;
+  color: white;
+  font-weight:500;
+}
+
+.link--active :hover {
+  color: #c1ff32;
+  font-weight:900;
+}
