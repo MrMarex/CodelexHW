@@ -1,0 +1,39 @@
+{
+  "comments": [
+    {
+      "id": 1,
+      "author": "Jānis Seržants",
+      "image": "https://media.licdn.com/dms/image/C4E03AQHkC1WKivX_gw/profile-displayphoto-shrink_200_200/0/1516893668785?e=1680739200&v=beta&t=dtJALMdidX-Q6a4jws-XgPw39K0xhAZbUtCqmJodjKg",
+      "text": "Bet šito vaig",
+      "commentedOn": 1
+    },
+    {
+      "id": 2,
+      "author": "Jānis Seržants",
+      "image": "https://media.licdn.com/dms/image/C4E03AQHkC1WKivX_gw/profile-displayphoto-shrink_200_200/0/1516893668785?e=1680739200&v=beta&t=dtJALMdidX-Q6a4jws-XgPw39K0xhAZbUtCqmJodjKg",
+      "text": "Bet šito vaig",
+      "commentedOn": 2
+    },
+    {
+      "id": 3,
+      "author": "Jānis Seržants",
+      "image": "https://media.licdn.com/dms/image/C4E03AQHkC1WKivX_gw/profile-displayphoto-shrink_200_200/0/1516893668785?e=1680739200&v=beta&t=dtJALMdidX-Q6a4jws-XgPw39K0xhAZbUtCqmJodjKg",
+      "text": "Bet šito vaig",
+      "commentedOn": 2
+    },
+    {
+      "id": 4,
+      "author": "Jānis Seržants",
+      "image": "https://media.licdn.com/dms/image/C4E03AQHkC1WKivX_gw/profile-displayphoto-shrink_200_200/0/1516893668785?e=1680739200&v=beta&t=dtJALMdidX-Q6a4jws-XgPw39K0xhAZbUtCqmJodjKg",
+      "text": "Bet šito vaig",
+      "commentedOn": 4
+    },
+    {
+      "id": 5,
+      "author": "es",
+      "image": "https://www.shutterstock.com/image-photo/surreal-image-african-elephant-wearing-260nw-1365289022.jpg",
+      "text": "123",
+      "commentedOn": 7
+    }
+  ]
+}

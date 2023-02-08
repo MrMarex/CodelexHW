@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:ital,wght@0,100;1,1000&display=swap');
+
+.post {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    max-width: 1200px;
+}
+
+.post-name {
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    font-size: 60px;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.edit-heading {
+    color: white;
+    font-size: 80px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.edit-heading {
+    font-size: 40px;
+}
+
+.post-image {
+    width: 600px;
+    height: auto;
+    max-height: 500px;
+    border-radius: 20px;
+}
+
+.post-description {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 80%;
+    font-size: 30px;
+}
+
+.button--edit {
+    padding: 10px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.comment-heading {
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    color: white;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.comments-add {
+    display: flex;
+    width: 100%;
+
+}
+
+.comments-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.comments-input {
+    width:100%;
+    border:2px solid #aaa;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.comments-input:focus {
+    border-color:white;
+    box-shadow:0 0 8px 0 white;
+}
+
+.button--comment {
+    padding: 10px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.container-comment-list {
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.comment-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.one-comment {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0 20px;
+    border-radius: 20px;
+    margin: 15px 0;
+}
+
+.comment-image {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+}
+
+.comment-author {
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.comment-text {
+    font-size: 25px;
+}
+
+.edit-form {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.button--cancel {
+    background: rgb(82, 0, 0);
+    border: 2px solid white;
+}
+
+.edit-post {
+    display: flex;
+    flex-direction: column;
+}
+
+.editing-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-end;
+    margin: 0 auto;
+}
+
+.loading-title {
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    text-align: center;
+    font-size: 100px;
+    color: white;
+    font-weight: bold;
+}

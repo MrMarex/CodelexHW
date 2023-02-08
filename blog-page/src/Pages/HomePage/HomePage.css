@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:ital,wght@0,100;1,1000&display=swap');
+
+html { 
+    background: url(https://images.unsplash.com/photo-1517838277536-f5f99be501cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fGZpdG5lc3N8ZW58MHx8MHx8&w=1000&q=80) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+.body {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.main-container {
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    color: white;
+}
+
+.home-heading {
+    font-size: 250px;
+    margin: 20px 0;
+}
+
+.home-h2 {
+    font-size: 45px;
+    margin: 10px 0;
+}
+
+.home-paragraph {
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 20px;
+    width: 60%;
+}

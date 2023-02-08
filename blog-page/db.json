@@ -1,0 +1,76 @@
+{
+    "comments": [
+        {
+            "id": 1,
+            "author": "Jānis Seržants",
+            "image": "",
+            "text": "Bet šitas jāzin",
+            "commented-on": 1
+        },
+        {
+            "id": 1,
+            "author": "Jānis Seržants",
+            "image": "",
+            "text": "Bet šitas jāzin",
+            "commented-on": 2
+        },
+        {
+            "id": 1,
+            "author": "Jānis Seržants",
+            "image": "",
+            "text": "Bet šitas jāzin",
+            "commented-on": 2
+        },
+        {
+            "id": 1,
+            "author": "Jānis Seržants",
+            "image": "",
+            "text": "Bet šitas jāzin",
+            "commented-on": 4
+        }
+    ],
+    "posts": [
+        {
+            "id": 1,
+            "image": "https://onnitacademy.imgix.net/2016/02/pullups.png",
+            "name": "Pull up",
+            "description": "A pull-up is an upper-body exercise that involves hanging from a pull-up bar by your hands with your palms facing away from you, and lifting your entire body up with your arm and back muscles until your chest touches the bar.",
+            "comments": []
+        },
+        {
+            "id": 2,
+            "image": "https://picsum.photos/200/200",
+            "name": "Deadlift",
+            "description": "The deadlift is a movement in which your hips hinge backward to lower down and pick up a weighted barbell or kettlebell from the floor.",
+            "comments": []
+        },
+        {
+            "id": 3,
+            "image": "https://i0.wp.com/thefitnessmaverick.com/wp-content/uploads/2020/10/F265CF38-5010-4DBF-BE3A-68C68A2A7E02_1_201_a-e1602589179813.jpeg?fit=1024%2C598&ssl=1",
+            "name": "Barbell row",
+            "description": "The barbell row is a two-step move. You lift the barbell from the ground and then angle your chest parallel to the ground so you're slightly bent over. Then, you lift and lower the barbell in a series of reps.",
+            "comments": []
+        },
+        {
+            "id": 4,
+            "image": "https://ix-cdn.b2e5.com/images/41628/41628_e731cbd2d6834db6abfd90d944b18ba4_1653409458.jpeg",
+            "name": "Bench press",
+            "description": "The bench press is a compound exercise that targets the muscles of the upper body. It involves lying on a bench and pressing weight upward using either a barbell or a pair of dumbbells.",
+            "comments": []
+        },
+        {
+            "id": 5,
+            "image": "https://images.ctfassets.net/3s5io6mnxfqz/34Npc5PKLKJi6HIYvFw9XI/3e45754912cf266e7401cb8074c63239/AdobeStock_386146138_2.jpeg",
+            "name": "Squat",
+            "description": "A squat is a strength exercise in which the trainee lowers their hips from a standing position and then stands back up.",
+            "comments": []
+        },
+        {
+            "id": 6,
+            "image": "https://phantom-marca.unidadeditorial.es/a077d43f132e35723a1997dfe195ed4b/crop/0x8/1000x569/resize/1320/f/jpg/assets/multimedia/imagenes/2022/04/30/16513084633207.jpg",
+            "name": "Overhead press",
+            "description": "The overhead press is an upper-body weight training exercise in which the trainee presses a weight overhead while seated or standing. It is mainly used to develop the anterior deltoid muscles of the shoulder.",
+            "comments": []
+        }
+      ]
+}
