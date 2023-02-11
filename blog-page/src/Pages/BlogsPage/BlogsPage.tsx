@@ -9,7 +9,7 @@ import { toast } from 'react-toastify';
 type Post = {
     id: number,
     image: string,
-    name: string,
+    title: string,
     description: string,
     comments:number[],
     excerpt: string
@@ -49,10 +49,10 @@ const BlogsPage = () => {
             <div className="posts">
                 {data.map((post: Post) => (
                 <div key={post.id} className='post-card'>
-                    <h2 className='post-name'>{post.name}</h2>
+                    <h2 className='post-name'>{post.title}</h2>
                     <img
                         src={post.image}
-                        alt={post.name}
+                        alt={post.title}
                         className='posts-image'
                     />
                     <p className='excerpt'>{post.excerpt}</p>

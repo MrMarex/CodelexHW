@@ -1,26 +1,26 @@
 import './BlogPage.css';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import { useParams, useNavigate, Navigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 type Comments = {
     id: number;
     author: string;
-    image: string;
-    text: string;
+    avatar: string;
+    commentText: string;
     commentedOn: number;
 };
 
 const BlogsPage = () => {
     const endpoint = 'http://localhost:3004/posts';
-    const commentsEndpoint = 'http://localhost:3005/comments';
+    const commentsEndpoint = 'http://localhost:3004/comments';
     const { id } = useParams();
     const navigate = useNavigate();
 
     const [editPost, setEditPost] = useState(false);
     const [postData, setPostData] = useState({
-        name: '',
+        title: '',
         image: '',
         description: '',
         excerpt: ''
@@ -29,15 +29,15 @@ const BlogsPage = () => {
     const [comment, setComment] = useState<Comments>({
         id: 0,
         author: '',
-        image: '',
-        text: '',
+        avatar: '',
+        commentText: '',
         commentedOn: 0,
     });
 
     const { data: post, status: postStatus } = useQuery(['post', id], async () => {
         const response = await axios.get(`${endpoint}/${id}`);
         setPostData({
-            name: response.data.name,
+            title: response.data.title,
             image: response.data.image,
             description: response.data.description,
             excerpt: response.data.excerpt
@@ -79,7 +79,7 @@ const BlogsPage = () => {
 return (
         <div>
             <div className='post'>
-                <h1 className='post-name'>{post.name}.</h1>
+                <h1 className='post-name'>{post.title}.</h1>
                 <img
                     src={post.image}
                     alt={post.name}
@@ -94,8 +94,8 @@ return (
                     <form onSubmit={handlePostSubmit} className='edit-form'>
                         <input
                             type="text"
-                            name="name"
-                            value={postData.name}
+                            name="title"
+                            value={postData.title}
                             onChange={handlePostChange}
                             placeholder="Name"
                             required
@@ -154,15 +154,15 @@ return (
                             />
                             <input
                                 type="text"
-                                name="image"
-                                value={comments.image}
+                                name="avatar"
+                                value={comments.avatar}
                                 onChange={handleCommentChange}
                                 placeholder="Image URL"
                                 className='comments-input'
                             />
                             <input
-                                name="text"
-                                value={comments.text}
+                                name="commentText"
+                                value={comments.commentText}
                                 onChange={handleCommentChange}
                                 placeholder="Comment"
                                 required
@@ -176,13 +176,13 @@ return (
                             {filteredComments.map((comments: Comments) => (
                                 <li key={comments.id} className='one-comment'>
                                     <img
-                                        src={comments.image}
+                                        src={comments.avatar}
                                         alt={comments.author}
                                         className='comment-image'
                                     />
                                     <div className='comment-text-container'>
                                         <h3 className='comment-author'>{comments.author}</h3>
-                                        <p className='comment-text'>{comments.text}</p>
+                                        <p className='comment-text'>{comments.commentText}</p>
                                     </div>
                                 </li>
                             ))}
