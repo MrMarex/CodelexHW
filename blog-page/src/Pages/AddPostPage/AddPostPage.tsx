@@ -12,7 +12,6 @@ type Post = {
     title: string;
     description: string;
     excerpt: string;
-    comments: number[];
 };
 
 const AddPostPage = () => {
@@ -50,8 +49,7 @@ const AddPostPage = () => {
       image: "",
       title: "",
       description: "",
-      excerpt: "",
-      comments: [],
+      excerpt: ""
     });
   
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -61,7 +59,14 @@ const AddPostPage = () => {
     const handleSubmit = async (event: React.FormEvent) => {
       try {
         event.preventDefault();
-        await mutation.mutate(post);
+        const formData = new FormData();
+        formData.append('title', post.title);
+        formData.append('description', post.description);
+        formData.append('excerpt', post.excerpt);
+        const file = (event.target as HTMLFormElement).image.files![0];
+        console.log(file);
+        formData.append('image', file, file.name);
+        await axios.post(endpoint, formData, { headers: { 'Content-Type': 'multipart/form-data' } });
         showSuccess();
         navigate("/blogs");
       } catch {
@@ -69,19 +74,13 @@ const AddPostPage = () => {
         navigate("/");
       }
     };
-  
-    const mutation = useMutation(async (postData: Post) => {
-      const res = await axios.get(endpoint);
-      const posts = res.data as Post[];
-      const nextId =
-        posts.length > 0 ? Math.max(...posts.map((p) => p.id)) + 1 : 1;
-      return axios.post(endpoint, { ...postData, id: nextId });
-    });
 
     return (
         <div>
             <h1 className='add-heading'>Add Post</h1>
-            <form onSubmit={(handleSubmit)} className='add-form'>
+            <form onSubmit={(handleSubmit)} 
+                  encType='multipart/form-data' 
+                  className='add-form'>
                 <input
                     type="text"
                     name="title"
@@ -91,15 +90,12 @@ const AddPostPage = () => {
                     required
                     className='comments-input'
                     />
-                <input
-                    type="text"
-                    name="image"
-                    value={post.image}
-                    onChange={handleChange}
-                    placeholder="Image URL"
-                    required
-                    className='comments-input'
-                    />
+                <input type="file"
+                      accept="image/*"
+                      name="image"
+                      value={post.image}
+                      onChange={handleChange}
+                      className='comments-input'/>
                 <input
                     name="description"
                     value={post.description}

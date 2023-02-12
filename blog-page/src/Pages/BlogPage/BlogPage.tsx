@@ -81,7 +81,7 @@ return (
             <div className='post'>
                 <h1 className='post-name'>{post.title}.</h1>
                 <img
-                    src={post.image}
+                    src={`http://localhost:3004/images/${post.image}`}
                     alt={post.name}
                     className='post-image'
                     />

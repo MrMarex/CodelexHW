@@ -11,7 +11,6 @@ type Post = {
     image: string,
     title: string,
     description: string,
-    comments:number[],
     excerpt: string
 }
 
@@ -51,7 +50,7 @@ const BlogsPage = () => {
                 <div key={post.id} className='post-card'>
                     <h2 className='post-name'>{post.title}</h2>
                     <img
-                        src={post.image}
+                        src={`http://localhost:3004/images/${post.image}`}
                         alt={post.title}
                         className='posts-image'
                     />
