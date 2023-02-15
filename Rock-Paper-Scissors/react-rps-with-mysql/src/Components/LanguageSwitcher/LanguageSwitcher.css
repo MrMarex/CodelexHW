@@ -1,0 +1,20 @@
+.lng {
+    width: 50px;
+    height: 30px;
+    background-size: contain;
+    margin-top: 5px;
+    margin: 5px 10px;
+    cursor: pointer;
+}
+
+.lng-lv {
+    background-image: url('https://www.countryflags.com/wp-content/uploads/latvia-flag-png-large.png');
+}
+
+.lng-en {
+    background-image: url('https://www.countryflags.com/wp-content/uploads/united-kingdom-flag-png-large.png');
+}
+
+.lng-ru {
+    background-image: url('https://www.countryflags.com/wp-content/uploads/russia-flag-png-large.png');
+}

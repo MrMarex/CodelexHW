@@ -1,0 +1,15 @@
+.home-heading {
+    font-size: 80px;
+    text-decoration: underline;
+}
+
+.home-about {
+    font-size: 25px;
+}
+
+.instruction {
+    font-size: 40px;
+    font-weight: bold;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: white;
+}

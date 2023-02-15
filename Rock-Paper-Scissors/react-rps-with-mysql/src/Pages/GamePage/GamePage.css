@@ -1,0 +1,62 @@
+.title {
+    text-decoration: underline;
+}
+
+.title--heading {
+    font-size: 60px;
+}
+
+.player-name {
+    font-size: 25px;
+}
+
+.username-input {
+    width: 30%;
+    max-width: 350px;
+    height: 30px;
+    font-size: 25px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+
+.title--weapons {
+    font-size: 25px;
+}
+
+.result-text {
+    font-size: 25px;
+}
+
+.result {
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+.btn {
+    background: white;
+    border: 5px solid black;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.btn--scissors {
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReiryVzQzKZC4JVnmA_f9NYX0FPdTReAeEyBSoLCkc5aAf0XJgzldNY3XM76GD62Q2cZ0&usqp=CAU");
+    background-size: cover;
+}
+
+.btn--paper {
+    background: url("https://previews.123rf.com/images/codexserafinius/codexserafinius1710/codexserafinius171000035/87709245-hand-open-palm-hello-logo-icon-outline-illustration-of-hand-with-palm-hello-vector-illustration-for-.jpg");
+    background-size: cover;
+}
+
+.btn--rock {
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN4nsJwcjU1BIFZQxJjMZnWMk7_i0lGOMoxg&usqp=CAU");
+    background-size: cover;
+}

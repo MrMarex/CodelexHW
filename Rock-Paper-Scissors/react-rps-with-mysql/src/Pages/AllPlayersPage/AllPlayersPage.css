@@ -1,0 +1,54 @@
+.title {
+    text-decoration: underline;
+}
+
+.title--heading {
+    font-size: 60px;
+}
+
+.list {
+    margin: 0 auto;
+}
+
+.all-players {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.player-card {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: 75%;
+    max-width: 1000px;
+    padding: 10px;
+    height: 40px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.player-info {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.player-id {
+    position: absolute;
+    left: 5%;
+}
+
+.player-username {
+    position: absolute;
+    left: 20%;
+}
+
+.player-game-count {
+    position: absolute;
+    right: 5%;
+}
