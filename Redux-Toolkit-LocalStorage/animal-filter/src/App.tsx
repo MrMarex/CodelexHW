@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import AddAnimalForm from './Components/AddAnimalForm';
+import AddAnimalForm from './Components/AddAnimalForm/AddAnimalForm';
 import { RootState } from './Store/store';
-import AnimalListItem from './Components/AnimalListItem';
+import AnimalListItem from './Components/AnimalListItem/AnimalListItem';
+import './App.css'
 
 const App: React.FC = () => {
   const animals = useSelector((state: RootState) => state.animals.animals);
@@ -17,28 +18,32 @@ const App: React.FC = () => {
   const filteredAnimals = selectedSpecies ? animals.filter((animal) => animal.species === selectedSpecies) : animals;
 
   return (
-    <div>
-      <h1>Animal List</h1>
+    <div className='App'>
+      <h1 className='app-heading'>Animal list.</h1>
       {animals.length === 0 ? (
         <div>
-          <p>No animals added.</p>
+          <p className='no-animals'>No animals added.</p>
         </div>
       ) : (
         <>
-          <label htmlFor="species">Filter by species:</label>
-          <select id="species" name="species" value={selectedSpecies} onChange={handleSpeciesChange}>
-          <option value="">Show all</option>
-                {speciesArr.map((species) => (
-                    <option key={species} value={species}>
-                        {species}
-                    </option>
-                ))}
+          <select
+            className='input-select'
+            id="species"
+            name="species"
+            value={selectedSpecies}
+            onChange={handleSpeciesChange}>
+            <option value="">Filter by specie</option>
+            {speciesArr.map((species) => (
+              <option key={species} value={species}>
+                {species}
+              </option>
+            ))}
           </select>
-          <ul>
+          <div className='animal-list'>
             {filteredAnimals.map((animal, index) => (
               <AnimalListItem key={index} animal={animal} index={index} />
             ))}
-          </ul>
+          </div>
         </>
       )}
       <AddAnimalForm />
