@@ -1,12 +1,14 @@
 import { Provider } from "react-redux";
 import { setupListeners } from "@reduxjs/toolkit/query";
-import AnimalList from "./Components/AnimalsList";
-import AddAnimalForm from "./Components/AddAnimalForm";
+import AnimalList from "./Components/AnimalsList/AnimalsList";
+import AddAnimalForm from "./Components/AddAnimalForm/AddAnimalForm";
 import store from "./Store/store";
+import './App.css';
 
 function App() {
   return (
-    <div>
+    <div className="app">
+      <h1 className="main-heading">Animal list.</h1>
       <AddAnimalForm />
       <AnimalList />
     </div>

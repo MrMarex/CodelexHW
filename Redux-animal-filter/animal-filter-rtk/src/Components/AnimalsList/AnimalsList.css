@@ -1,0 +1,38 @@
+.animal-list {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin:30px 0;
+    gap: 20px;
+}
+
+.animal-list-item {
+    border: 1px solid black;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.list-item {
+    width: 100%;
+}
+
+.list-item--image {
+    height:250px;
+    object-fit: cover;
+    margin: 0;
+}
+
+.list-item--name, .list-item--species {
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 25px;
+}
+
+.btn--delete-animal {
+    color: red !important;
+}

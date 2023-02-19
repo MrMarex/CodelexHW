@@ -14,14 +14,20 @@ export const animalsApi = createApi({
             }),
             onQueryStarted: (_, { dispatch, queryFulfilled }) => {
                 queryFulfilled.then(() => {
-                    dispatch(animalsApi.endpoints.getAllAnimals.initiate({skip: false}))
+                    dispatch(animalsApi.endpoints.getAllAnimals.initiate({ skip: false }))
                 })
             },
         }),
         getAllAnimals: builder.query({
             query: () => "/animals",
         }),
+        deleteAnimal: builder.mutation({
+            query: (animalId) => ({
+                url: `/animals/${animalId}`,
+                method: "DELETE",
+            }),
+        }),
     }),
 });
 
-export const { useAddAnimalMutation, useGetAllAnimalsQuery } = animalsApi;
+export const { useAddAnimalMutation, useGetAllAnimalsQuery, useDeleteAnimalMutation } = animalsApi;
