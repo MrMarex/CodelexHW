@@ -7,12 +7,12 @@ interface Animal {
     species: string;
 }
 
-type Props = {
+type AnimalProps = {
     animal: Animal;
     index: number;
 };
 
-const AnimalListItem = ({ animal, index }: Props) => {
+const AnimalListItem = ({ animal, index }: AnimalProps) => {
     const dispatch = useDispatch();
 
     const handleDeleteClick = () => {
@@ -30,4 +30,3 @@ const AnimalListItem = ({ animal, index }: Props) => {
 };
 
 export default AnimalListItem;
-

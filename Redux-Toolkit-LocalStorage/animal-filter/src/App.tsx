@@ -6,6 +6,8 @@ import AnimalListItem from './Components/AnimalListItem';
 
 const App: React.FC = () => {
   const animals = useSelector((state: RootState) => state.animals.animals);
+  const speciesArr = useSelector((state: RootState) => state.animals.species);
+
   const [selectedSpecies, setSelectedSpecies] = useState('');
 
   const handleSpeciesChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -25,14 +27,12 @@ const App: React.FC = () => {
         <>
           <label htmlFor="species">Filter by species:</label>
           <select id="species" name="species" value={selectedSpecies} onChange={handleSpeciesChange}>
-            <option value="">All</option>
-            <option value="unknown">Unknown</option>
-            <option value="dog">Dog</option>
-            <option value="cat">Cat</option>
-            <option value="chicken">Chicken</option>
-            <option value="donkey">Donkey</option>
-            <option value="rabbit">Rabbit</option>
-            <option value="horse">Horse</option>
+          <option value="">Show all</option>
+                {speciesArr.map((species) => (
+                    <option key={species} value={species}>
+                        {species}
+                    </option>
+                ))}
           </select>
           <ul>
             {filteredAnimals.map((animal, index) => (

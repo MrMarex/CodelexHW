@@ -32,12 +32,8 @@ const animalsSlice = createSlice({
             state.animals = state.animals.filter((_, index) => index !== action.payload);
             localStorage.setItem('animals', JSON.stringify(state.animals));
         },
-        clearAnimals: (state) => {
-            state.animals = [];
-            localStorage.removeItem('animals');
-        },
     }
 });
 
-export const { addAnimal, addSpecies, removeAnimal, clearAnimals } = animalsSlice.actions;
+export const { addAnimal, addSpecies, removeAnimal } = animalsSlice.actions;
 export default animalsSlice.reducer;
