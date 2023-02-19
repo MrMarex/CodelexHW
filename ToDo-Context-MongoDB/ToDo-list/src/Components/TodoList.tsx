@@ -20,7 +20,7 @@ function TodoList() {
         <button type="submit">Add</button>
       </form>
       <ul>
-        {todos.map((todo) => (
+        {todos.map((todo: TodoType) => (
           <li key={todo._id}>
             <input
               type="checkbox"

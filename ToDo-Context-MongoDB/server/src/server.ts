@@ -1,4 +1,4 @@
-//Cooment is error somehow
+//First line is error somehow
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -29,6 +29,7 @@ app.get('/todo', async (req, res) => {
 app.post('/todo', async (req, res) => {
   const { text } = req.body;
   const now = new Date();
+  console.log('Logging text: ' + text)
   const todo = {
     text,
     completed: false,

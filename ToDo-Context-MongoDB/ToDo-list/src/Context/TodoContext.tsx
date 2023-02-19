@@ -1,28 +1,21 @@
-import { createContext, useState, useEffect, useContext, ReactNode } from 'react';
+import { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 import { TodoType } from '../types/TodoType';
 
-const endpoint = 'http://localhost:3000';
-
-type TodoContextType = {
+interface TodoContextType {
   todos: TodoType[];
-  setTodos: React.Dispatch<React.SetStateAction<TodoType[]>>;
-  handleAddTodo: (newTodoText: string) => void;
+  handleAddTodo: (text: string) => void;
   handleUpdateTodo: (id: string, text: string, completed: boolean) => void;
   handleDeleteTodo: (id: string) => void;
-};
+}
 
-export const TodoContext = createContext<TodoContextType>({
-  todos: [],
-  setTodos: () => null,
-});
+const endpoint = 'http://localhost:3000';
 
-type Props = {
-  children: ReactNode;
-};
+export const TodoContext = createContext<TodoContextType | null>(null);
 
-export function TodoProvider({ children }: Props) {
+export const TodoProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [todos, setTodos] = useState<TodoType[]>([]);
+  const [newTodoText, setNewTodoText] = useState<string>('');
 
   useEffect(() => {
     axios.get(`${endpoint}/todo`).then((res) => {
@@ -30,10 +23,11 @@ export function TodoProvider({ children }: Props) {
     });
   }, []);
 
-  const handleAddTodo = (newTodoText: string) => {
+  const handleAddTodo = (text: string) => {
     const now = new Date().toLocaleString();
-    axios.post(`${endpoint}/todo`, { text: newTodoText, createdAt: now }).then(({ data }) => {
+    axios.post(`${endpoint}/todo`, { text, createdAt: now }).then(({ data }) => {
       setTodos([...todos, { ...data, _id: data._id }]);
+      setNewTodoText('');
     });
   };
   
@@ -62,16 +56,9 @@ export function TodoProvider({ children }: Props) {
     });
   };
 
-  const value = {
-    todos,
-    handleAddTodo,
-    handleUpdateTodo,
-    handleDeleteTodo,
-  };
-
   return (
-    <TodoContext.Provider value={value}>
+    <TodoContext.Provider value={{ todos, handleAddTodo, handleUpdateTodo, handleDeleteTodo }}>
       {children}
     </TodoContext.Provider>
   );
-}
+};
