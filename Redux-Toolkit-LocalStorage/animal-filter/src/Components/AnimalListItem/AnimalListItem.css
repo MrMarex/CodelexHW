@@ -1,11 +1,12 @@
 .card {
     display: flex;
     flex-direction: column;
+    gap: 10px;
     width: 300px;
-    border: 2px solid #000000;
     border-radius: 10px;
     padding: 10px;
     text-decoration: underline;
+    background-color: black;
 }
 
 .card-title {
