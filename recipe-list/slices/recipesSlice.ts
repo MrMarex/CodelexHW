@@ -9,8 +9,7 @@ export type RecipeType = {
 }
 
 export const recipesAPI = createApi({
-    reducerPath: 'recipesApi',
-    tagTypes: ['Recipes'],
+    reducerPath: 'recipes',
     baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3000/api' }),
     endpoints: (builder) => ({
         getAllRecipes: builder.query<RecipeType[], void>({

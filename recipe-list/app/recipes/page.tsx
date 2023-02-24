@@ -1,24 +1,25 @@
 'use client'
 
-import Link from 'next/link';
 import { RecipeType, useGetAllRecipesQuery } from '@/slices/recipesSlice';
-import MainLayout from '../layout';
+import Link from 'next/link';
 import RecipesList from '../components/RecipesList/RecipesList';
 import RecipesListItem from '../components/RecipesListItem/RecipesListItem';
 
 export default function Recipes() {
-    const { data: recipes = [], isLoading } = useGetAllRecipesQuery();
-    recipes.push({
-        title: 'Test',
-        image: 'https://picsum.photos/200/300',
-        recipe: 'Get that meal done',
-        ingredients: 'Patience, luck',
-        _id: 'a1'
-    })
-    console.log(recipes)
+    const { data: recipes, isLoading } = useGetAllRecipesQuery();
 
+    console.log(recipes)
+    console.log('---');
+
+    if (!recipes) {
+        return <div>Data Undefined!</div>
+    }
+
+    if(isLoading) {
+        return <div>Loading...</div>
+    }
+    
     return (
-        <MainLayout title='Recipe details'>
             <RecipesList>
                 {recipes.map((recipe: RecipeType) => (
                     <Link key={recipe._id} href={`/recipes/${recipe._id}`}>
@@ -26,6 +27,5 @@ export default function Recipes() {
                     </Link>
                 ))}
             </RecipesList>
-        </MainLayout>
     );
 }
