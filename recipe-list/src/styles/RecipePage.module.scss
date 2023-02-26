@@ -7,13 +7,8 @@
 
 .header{
     font-weight: 900;
-    font-size: 3rem;
-}
-
-.ingredientsWrap{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    font-size: 40px;
+    text-align: center;
 }
 
 .title{
@@ -23,18 +18,65 @@
     text-transform: capitalize;
 }
 
-.list{
-    list-style: circle;
-    list-style-position: inside;
-}
-
-.listItem{
-    font-size: 1.5rem;
-    padding-bottom: 10px;
+.ingredientsList {
+    font-size: 20px;
+    background-color: rgba($color: #FFF, $alpha: 0.6);
+    padding: 5px;
 }
 
 .recipe{
     display: block;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 25px;
+    background-color: rgba($color: #FFF, $alpha: 0.6);
+    padding: 5px;
+}
+
+.editButton {
+    right: 0;
+}
+
+.editRecipeForm {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+    max-width: 1000px;
+    min-width: 350px;
+    gap: 20px;
+}
+
+.formLabel {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgba($color: #000, $alpha: 0.6);
+    padding: 10px;
+    color: white;
+}
+
+.formInput, .formTextArea {
+    width: 100%;
+    border: none;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    max-width: 690px;
+    min-width: 350px;
+}
+
+.formTextArea {
+    max-height: 500px;
+    min-height: 25px;
+}
+
+.submitEditButton {
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px;
 }

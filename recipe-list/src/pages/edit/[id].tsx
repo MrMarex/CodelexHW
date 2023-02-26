@@ -44,24 +44,46 @@ export default function EditRecipe ({ recipe: recipeData }: TRecipeProps) {
             <RecipeLayout>
                 <div className={style.recipesWrap}>
                     <h2 className={style.header}>Edit {title}</h2>
-                    <form onSubmit={handleFormSubmit}>
-                        <label>
-              Title:
-                            <input type="text" name="title" value={title} onChange={handleInputChange} />
+                    <form onSubmit={handleFormSubmit} className={style.editRecipeForm}>
+                        <label className={style.formLabel}>
+                        Title: <br />
+                            <input
+                                type="text"
+                                name="title"
+                                className={style.formInput}
+                                value={title}
+                                onChange={handleInputChange}
+                            />
                         </label>
-                        <label>
-              Ingredients:
-                            <textarea name="ingredients" value={ingredients} onChange={handleInputChange} />
+                        <label className={style.formLabel}>
+                        Ingredients: <br />
+                            <textarea
+                                name="ingredients"
+                                className={style.formTextArea}
+                                value={ingredients}
+                                onChange={handleInputChange}
+                            />
                         </label>
-                        <label>
-              Recipe:
-                            <textarea name="recipe" value={instructions} onChange={handleInputChange} />
+                        <label className={style.formLabel}>
+                        Recipe: <br />
+                            <textarea
+                                name="recipe"
+                                className={style.formTextArea}
+                                value={instructions}
+                                onChange={handleInputChange}
+                            />
                         </label>
-                        <label>
-              Image:
-                            <input type="text" name="image" value={image} onChange={handleInputChange} />
+                        <label className={style.formLabel}>
+                        Image: <br />
+                            <input
+                                type="text"
+                                name="image"
+                                className={style.formInput}
+                                value={image}
+                                onChange={handleInputChange}
+                            />
                         </label>
-                        <button type="submit">Update Recipe</button>
+                        <button type="submit" className={style.submitEditButton}>Update Recipe</button>
                     </form>
                     <Image src={image} alt={title} width={350} height={350} />
                 </div>

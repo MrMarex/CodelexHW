@@ -14,9 +14,6 @@ export default function RecipeLayout ({ children, onDelete }: TRecipeLayoutProps
             <main>
                 {children}
                 <div className={style.buttonsWrap}>
-                    <Link href={'/recipes'}>
-                        <Button label="Back to all recipes" type="button" />
-                    </Link>
                     {onDelete && (
                         <Button
                             label="Delete recipe"
@@ -24,6 +21,9 @@ export default function RecipeLayout ({ children, onDelete }: TRecipeLayoutProps
                             onClick={onDelete}
                         />
                     )}
+                    <Link href={'/recipes'}>
+                        <Button label="Back to all recipes" type="button" />
+                    </Link>
                 </div>
             </main>
         </>

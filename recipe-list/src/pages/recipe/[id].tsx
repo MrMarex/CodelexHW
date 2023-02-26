@@ -29,6 +29,7 @@ export default function Recipe ({ recipe: recipeData }: TRecipeProps) {
             await axios.delete(`${endpoint}/deleteRecipe?id=${id}`);
             router.push('/recipes');
         } catch (error) {
+            // eslint-disable-next-line no-console
             console.error(error);
         }
     };
@@ -40,7 +41,7 @@ export default function Recipe ({ recipe: recipeData }: TRecipeProps) {
                     <h2 className={style.header}>{title}</h2>
                     <Image src={image} alt={title} width={350} height={350} />
                     <div>
-                        <div>{ingredients}</div>
+                        <div className={style.ingredientsList}>{ingredients}</div>
                         <div className={style.recipeWrap}>
                             <h4 className={style.title}>Recipe:</h4>
                             <span className={style.recipe}>{recipe}</span>
@@ -48,8 +49,8 @@ export default function Recipe ({ recipe: recipeData }: TRecipeProps) {
                     </div>
                 </div>
             </RecipeLayout>
-            <Link href={`/edit/${id}`}>
-                <Button label='Edit' type='button' />
+            <Link href={`/edit/${id}`} className={style.editButton}>
+                <Button label='Edit' type='button'/>
             </Link>
         </MainLayout>
     );
