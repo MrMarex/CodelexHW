@@ -1,0 +1,44 @@
+.newRecipeForm {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+    max-width: 1000px;
+    min-width: 350px;
+    gap: 20px;
+}
+
+.formLabel {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgba($color: #000, $alpha: 0.6);
+    padding: 10px;
+    color: white;
+}
+
+.formInput, .formTextArea {
+    width: 100%;
+    border: none;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    max-width: 690px;
+    min-width: 350px;
+}
+
+.formTextArea {
+    max-height: 500px;
+    min-height: 25px;
+}
+
+.button {
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px;
+}

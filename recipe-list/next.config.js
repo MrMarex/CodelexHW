@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
-}
+    reactStrictMode: false,
+};
 
-module.exports = nextConfig
+module.exports = {
+    images: {
+        domains: ['*', 'www.foodandwine.com'],
+    },
+};

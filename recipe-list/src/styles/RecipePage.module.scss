@@ -1,0 +1,40 @@
+.recipesWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.header{
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+.ingredientsWrap{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.title{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.list{
+    list-style: circle;
+    list-style-position: inside;
+}
+
+.listItem{
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+
+.recipe{
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+}
