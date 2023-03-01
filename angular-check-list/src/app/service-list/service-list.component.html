@@ -1,0 +1,35 @@
+<div class="container-of-list">
+    <div class="service-list-heading">
+      <h2>Services</h2>
+    </div>
+  
+    <div class="service-list">
+        <div
+            class="list-item"
+            *ngFor="let service of services"
+            [class.checked]="service.checked"
+            (click)="onServiceClick(service)"
+        >
+            <div class="list-item-name">
+                <span>
+                    {{ service.name }}
+                </span>
+            </div>
+            <div class="list-item-price">
+                <span>
+                    {{ service.price | currency:'USD':'symbol':'1.2-2' }}
+                </span>
+            </div>
+      </div>
+      
+      <div class="total-price">
+          <div class="total-price--text">
+              <span>Total: </span>
+            </div>
+            <div class="total-price-sum">
+                {{ total | currency:'USD':'symbol':'1.2-2' }}
+            </div>
+        </div>
+    </div>
+</div>
+  

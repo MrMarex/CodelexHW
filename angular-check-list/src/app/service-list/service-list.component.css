@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+ul {
+    list-style-type: none;
+    padding-left:0;
+}
+
+.service-list-heading {
+    font-family: 'Cookie', cursive;
+    font-size: 60px;
+    margin: 10px 0;
+    line-height: 60px;
+    color: white;
+}
+
+.service-list {
+    margin-top:0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Oswald', sans-serif;
+    width: 350px;
+}
+
+.list-item {
+    padding: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(223,78,122,255);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.list-item.checked {
+    background-color: rgba(130,186,96,255);
+    color: white;
+}
+
+.total-price {
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px;
+    border-top: 1px solid white;
+    margin-top: 10px
+}
+
+.container-of-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
