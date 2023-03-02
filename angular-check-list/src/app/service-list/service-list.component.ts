@@ -22,8 +22,13 @@ export class ServiceListComponent {
   total: number = 0;
 
   updateTotal() {
-    this.total = this.services.filter(service => service.checked)
-                           .reduce((sum, service) => sum + service.price, 0);
+    this.total = this.services.reduce((sum, service) => {
+        if (service.checked) {
+          sum + service.price
+        } 
+
+        return sum;
+      }, 0);
   }
 
   onServiceClick(service: ServiceItem) {
