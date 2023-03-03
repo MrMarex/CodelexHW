@@ -1,0 +1,18 @@
+<div class="switcher__wrap">
+    <div class="switcher__text">
+        <span>
+            Show {{isChecked ? 'electric' : 'internal combustion'}}
+        </span>
+    </div>
+    <div class="switcher">
+        <label>
+            <input 
+            class="switcher__input" 
+            type="checkbox" 
+            [checked]="isChecked" 
+            (change)="switcherHandler()"
+            >
+            <span class="switcher__slider"></span>
+        </label>
+    </div>
+</div>

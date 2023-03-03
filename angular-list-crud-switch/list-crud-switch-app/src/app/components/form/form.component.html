@@ -1,0 +1,28 @@
+<form class="form__wrapper" [formGroup]="carForm" (ngSubmit)="submitForm()">
+    <label class="form__field-wrap">
+        <input 
+            class="form__input" 
+            type="text" 
+            formControlName="name"
+            placeholder="Car name..."
+        >
+    </label>
+    <label class="form__field-wrap">
+        <select class="form__select" formControlName="category">
+            <option value="" disabled selected>select category</option>
+            <option 
+                *ngFor="let category of categories" 
+                [value]="category"
+            >
+                {{category}}
+            </option>
+        </select>
+    </label>
+    <button 
+        type="submit" 
+        class="form__button" 
+        [disabled]="carForm.invalid"
+    >
+        Add
+    </button>
+</form>
