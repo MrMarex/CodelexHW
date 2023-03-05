@@ -1,0 +1,13 @@
+<div class="todo-item__wrap">
+  <div>
+    <input
+      class="todo-item__checkbox"
+      [id]="id"
+      type="checkbox"
+      [checked]="completed"
+      (change)="toggleCompleted()"
+    >
+  </div>
+  <span class="todo-item__text">{{ todo }}</span>
+  <div (click)="deleteHandler.emit()" class="todo-item__delete">x</div>
+</div>

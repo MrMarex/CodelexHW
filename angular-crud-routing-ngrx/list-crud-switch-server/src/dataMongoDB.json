@@ -1,0 +1,29 @@
+[{
+    "_id": {
+      "$oid": "64023a2f4655d480eef1314d"
+    },
+    "name": "Tesla model X",
+    "category": "electric",
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "64023a5b4655d480eef13154"
+    },
+    "name": "Audi RS7",
+    "category": "internal combustion",
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "64023a7a4655d480eef1315c"
+    },
+    "name": "BMW M5",
+    "category": "internal combustion",
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "64023a9b4655d480eef13160"
+    },
+    "name": "MUSTANG MACH-E",
+    "category": "electric",
+    "__v": 0
+  }]

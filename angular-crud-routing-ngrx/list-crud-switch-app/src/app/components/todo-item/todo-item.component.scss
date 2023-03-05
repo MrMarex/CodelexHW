@@ -1,0 +1,19 @@
+.todo-item__wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba($color: #000, $alpha: 0.7);
+    color: white;
+    margin-top: 10px;
+}
+
+.todo-item__delete {
+    cursor: pointer;
+    border: 1px solid #FFF;
+    padding: 10px;
+    border-radius: 20px;
+}

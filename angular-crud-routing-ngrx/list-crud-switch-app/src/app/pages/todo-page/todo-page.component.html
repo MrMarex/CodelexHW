@@ -1,0 +1,23 @@
+<div *ngIf="todo$ | async as todos" class="container">
+    <div class="todo-page__todos">
+        <h1 class="todo-page__heading">Todo list</h1>
+        <app-todo-form (todoSubmitted)="create($event)"/>
+        <app-todo-list class="todo-page__list">
+            <app-todo-item
+                *ngFor="let todo of todos, index as i"
+                (deleteHandler)="delete(i)"
+                [todo]="todo.title"
+                [completed]="todo.completed"
+                [id]="i"
+            ></app-todo-item>
+            <div 
+                class="todo-page__empty"
+                *ngIf="todos.length === 0"
+            >
+                <span>
+                    List is empty
+                </span>
+            </div>
+        </app-todo-list>
+    </div>
+</div>

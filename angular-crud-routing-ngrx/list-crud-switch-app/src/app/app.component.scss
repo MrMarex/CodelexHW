@@ -1,0 +1,15 @@
+.navigation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.navigation__button {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 20px;
+    text-decoration: underline;
+}

@@ -1,0 +1,9 @@
+<div class="car-item__wrap">
+    <div class="car-item__category">{{ category | uppercase }}</div>
+    <div>{{ name | uppercase }}</div>
+    <div (click)="deleteHandler.emit()" class="car-item__delete">
+        <span>
+            DELETE
+        </span>
+    </div>
+</div>
