@@ -24,30 +24,38 @@ import HelloWorld from './components/HelloWorld.vue'
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
 
 .jokes-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .joke {
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.6);
-    color: black;
-    font-family: 'Signika Negative', sans-serif;
+  border: none;
+  box-shadow: -10px 10px black;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffb100;
+  color: black;
+  font-family: 'Signika Negative', sans-serif;
+}
+
+.joke__joke {
+  width: 80%;
 }
 
 .joke__btn {
   border-radius: 15px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0);
   cursor: pointer;
   color: white;
   margin: 0 5px;
-  border: none;
+  border: 2px solid white;
+  height: 40px;
+  width: 20%;
 }
 
 .empty {

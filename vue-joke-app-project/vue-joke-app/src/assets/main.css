@@ -8,19 +8,19 @@
 }
 
 body {
-  background-image: linear-gradient(to right top, #000000, #1a000d, #25001b, #2b002b, #2a0041);
+  background-image: linear-gradient(to top, #ff9e53, #f6b14b, #e8c54a, #d5d754, #bee968, #a5ec7b, #8ced8f, #73eea3, #62e0ad, #5bd1b2, #5dc1b2, #66b1ad);
 }
 
 a,
-.white {
+.page-heading {
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   transition: 0.4s;
 }
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    background-color: hsla(0, 0%, 100%, 0.6);
   }
 }
 
