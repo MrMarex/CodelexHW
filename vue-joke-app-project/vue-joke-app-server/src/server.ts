@@ -10,6 +10,7 @@ mongoose.set('strictQuery', false);
 type Joke = {
   joke: string;
   id: number;
+  category: string;
 };
 
 //Link to your database

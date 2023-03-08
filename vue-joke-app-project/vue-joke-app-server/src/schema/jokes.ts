@@ -9,6 +9,10 @@ const jokeSchema = new mongoose.Schema({
     type: Number,
     require: true,
   },
+  category: {
+    type: String,
+    require: true,
+  },
 });
 
 export default mongoose.model("Jokes", jokeSchema);

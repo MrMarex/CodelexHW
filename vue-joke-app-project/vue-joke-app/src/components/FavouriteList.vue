@@ -5,7 +5,7 @@
     <div v-for="joke in data" v-bind:key="joke.id">
       <div class="joke">
         <div class="joke__joke">
-          {{ joke.joke }}
+          [{{ joke.category }}] {{ joke.joke }}
         </div>
         <button class="joke__btn btn--delete" @click="deleteJoke(joke.id)">Delete</button>
       </div>
