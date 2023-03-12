@@ -1,0 +1,12 @@
+@import './base.css';
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.navigation {
+    margin: 0 auto;
+}
