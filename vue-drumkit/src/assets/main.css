@@ -1,0 +1,13 @@
+body {
+  background-image: linear-gradient(to right bottom, #000000, #20080e, #350b13, #4b0714, #610210, #6f000d, #7c0008, #890001, #930001, #9d0001, #a70001, #b10000);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  font-weight: normal;
+  color: white;
+}
